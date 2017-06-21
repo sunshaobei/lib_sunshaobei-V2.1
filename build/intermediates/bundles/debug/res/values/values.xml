@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <declare-styleable name="FlowLayout"><attr name="android:orientation"/><attr format="enum" name="layoutDirection">
+            <enum name="ltr" value="0"/>
+            <enum name="rtl" value="1"/>
+        </attr><attr format="boolean" name="debugDraw"/><attr format="float" name="weightDefault"/><attr name="android:gravity"/></declare-styleable>
+    <declare-styleable name="FlowLayout_LayoutParams"><attr format="boolean" name="layout_newLine"/><attr format="float" name="layout_weight"/><attr name="android:layout_gravity"/></declare-styleable>
+    <declare-styleable name="LetterSideBar"><attr format="dimension|reference" name="letterSize"/></declare-styleable>
+    <declare-styleable name="PagerSlidingTabStrip"><attr format="color" name="pstsIndicatorColor"/><attr format="color" name="pstsUnderlineColor"/><attr format="color" name="pstsDividerColor"/><attr format="dimension" name="pstsIndicatorHeight"/><attr format="dimension" name="pstsUnderlineHeight"/><attr format="dimension" name="pstsDividerPaddingTopBottom"/><attr format="dimension" name="pstsTabPaddingLeftRight"/><attr format="dimension" name="pstsScrollOffset"/><attr format="reference" name="pstsTabBackground"/><attr format="boolean" name="pstsShouldExpand"/><attr format="boolean" name="pstsTextAllCaps"/><attr format="color" name="pstsTextSelectedColor"/><attr format="float" name="pstsScaleZoomMax"/><attr format="boolean" name="pstsSmoothScrollWhenClickTab"/></declare-styleable>
+    <declare-styleable name="TabCircle"><attr format="integer|reference" name="tabcountc"/><attr format="dimension|reference" name="textSizec"/><attr format="dimension|reference" name="padingc"/><attr format="integer|reference" name="indicatorColorc"/></declare-styleable>
+    <declare-styleable name="TabTrangle"><attr format="integer|reference" name="tabcount"/><attr format="integer|reference" name="selectcolor"/><attr format="dimension|reference" name="textSize"/><attr format="dimension|reference" name="pading"/></declare-styleable>
+    <declare-styleable name="ViewPagerIndicator"><attr format="integer|reference" name="indicatorCount"/><attr format="dimension|reference" name="radiusSize"/><attr name="layout_position">
+            <enum name="middle" value="0"/>
+            <enum name="left" value="1"/>
+            <enum name="right" value="2"/>
+        </attr></declare-styleable>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="app_name">lib_yuchen</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <style name="ActivityInOutAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/push_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/push_right_out</item>
+    </style>
+    <style name="ActivityTheme_Light" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/ActivityInOutAnimation</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+    <style name="ActivityTheme_Translucent" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/ActivityInOutAnimation</item>
+    </style>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="dialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
+    </style>
+    <style mce_bogus="1" name="dialog_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+    <style name="popupwindow_style">
+        <item name="android:windowEnterAnimation">@anim/reply_window_enter</item>
+        <item name="android:windowExitAnimation">@anim/reply_window_exit</item>
+    </style>
+</resources>
